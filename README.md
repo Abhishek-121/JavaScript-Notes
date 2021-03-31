@@ -136,10 +136,9 @@ Generally start with small alphabet or use Camel-case Notation(like iLikePizza) 
 * Symbol : Always gives a guaranteed unique identifier
 * Null
 
-###Note : Everything except Object is Primitive type, Object is special one.
+### Note : Everything except Object is Primitive type, Object is special one.
 
 Six other escape sequences are valid in JavaScript:
-
 ```jsx
 Code	Result
 \b	Backspace
@@ -149,9 +148,24 @@ Code	Result
 \t	Horizontal Tabulator
 \v	Vertical Tabulator
 ```
-### Note :
-The 6 escape characters above were originally designed to control typewriters, teletypes, and fax machines. They do not make any sense in HTML.
+### Note :The 6 escape characters above were originally designed to control typewriters, teletypes, and fax machines. They do not make any sense in HTML.
 
+
+### Strings :
+
+* 3 ways to create strings:
+
+* using single quotes:
+
+const first = 'Soumya';
+
+* using double quotes:
+
+const middle = "Ranjan";
+
+* using backticks:
+
+const last = `Mohanty`;
 
 ```jsx
 Example
