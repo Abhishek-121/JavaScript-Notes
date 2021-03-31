@@ -235,6 +235,36 @@ var person = {
 objectName.methodName() 
 ```
 
+### Null vs Undefined 
+Null means an empty or non-existent value. Null is assigned, and explicitly means nothing. while undefined typically means a variable has been declared but not defined yet.
+
+```jsx
+let a = null;
+console.log(a);// null
+
+let b;
+console.log(b); // undefined
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
