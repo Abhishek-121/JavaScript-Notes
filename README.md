@@ -63,7 +63,16 @@ let’s walk through that Github search to see how we go from a URL typed into a
 10) Once the browser has finished loading all other assets that were listed in the HTML page, the page will finally be loaded in the browser window and the connection will be closed
 
 
-Painting the final picture
+## Painting the final picture
+
+Now that your browser has the resources comprising the website (HTML, CSS, JavaScript, images, etc), it has to go through several steps to present the resources to you as a human-readable webpage.
+
+Your browser has a rendering engine that’s responsible for displaying the content. The rendering engine receives the content of the resources in small chunks. Then there’s an HTML parsing algorithm that tells the browser how to parse the resources.
+
+Once parsed, it generates a tree structure of the DOM elements. DOM stands for Document Object Model and it is a convention for how to represent objects located in an HTML document. These objects — or “nodes” — of every document can be manipulated using scripting languages like JavaScript.
+
+![Dom Tree](https://user-images.githubusercontent.com/56202291/113097857-484e6d80-9215-11eb-860d-913824a8e6e9.jpeg)
+
 
 
 
