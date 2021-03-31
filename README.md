@@ -115,7 +115,8 @@ var z = x + y;
     ...
    }
 
-* Declaring a variable : Generally start with small alphabet or use Camel-case Notation(like iLikePizza)  or snake case(like i_like_pizza) also include 2 special character($and_).
+* Declaring a variable : 
+Generally start with small alphabet or use Camel-case Notation(like iLikePizza)  or snake case(like i_like_pizza) also include 2 special character($and_).
 
  
 - Anything which is in Global scope attached to the Window object.
@@ -126,17 +127,30 @@ var z = x + y;
 
 
 ## Types of Variables : 
-***
 
-1.String
-2.Number
-3.Object
-4.Boolean
-5.Undefined
-6.Symbol : Always gives a guaranteed unique identifier
-7.Null
+* String
+* Number
+* Object
+* Boolean
+* Undefined
+* Symbol : Always gives a guaranteed unique identifier
+* Null
 
-####Note : Everything except Object is Primitive type, Object is special one.
+###Note : Everything except Object is Primitive type, Object is special one.
+
+Six other escape sequences are valid in JavaScript:
+
+```jsx
+Code	Result
+\b	Backspace
+\f	Form Feed
+\n	New Line
+\r	Carriage Return
+\t	Horizontal Tabulator
+\v	Vertical Tabulator
+```
+### Note :
+The 6 escape characters above were originally designed to control typewriters, teletypes, and fax machines. They do not make any sense in HTML.
 
 
 ```jsx
