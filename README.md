@@ -153,7 +153,7 @@ Code	Result
 
 ### Strings :
 
-* 3 ways to create strings:
+-- 3 ways to create strings:
 
 * using single quotes:
 
@@ -167,7 +167,45 @@ const middle = "Ranjan";
 
 const last = `Mohanty`;
 
+### String Methods
+
+![String](https://user-images.githubusercontent.com/56202291/113100744-6e760c80-9219-11eb-9914-674930021e0d.jpeg)
+
+### Numbers 
+ Eg : var x = 20;
+ 
+ ### Methods
+ ![Number](https://user-images.githubusercontent.com/56202291/113101012-cdd41c80-9219-11eb-8777-55db7a579da5.jpeg)
+
+ 
+### Objects 
+
+-- In JavaScript, almost "everything" is an object.
+Booleans can be objects (if defined with the new keyword)
+Numbers can be objects (if defined with the new keyword)
+Strings can be objects (if defined with the new keyword)
+Dates are always objects
+Maths are always objects
+Regular expressions are always objects
+Arrays are always objects
+Functions are always objects
+Objects are always objects
+All JavaScript values, except primitives, are objects.
+
+* Objects are variables too. But objects can contain many values.
+
+* The values are written as name : value pairs (name and value separated by a colon).
+
 ```jsx
 Example
-document.getElementById("demo").innerHTML = "Hello JavaScript";
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
 ```
+
+-- There are different ways to create new objects:
+
+* Define and create a single object, using an object literal.
+* Define and create a single object, with the keyword new.
+* Define an object constructor, and then create objects of the constructed type.
+
+
+![objects](https://user-images.githubusercontent.com/56202291/113101532-771b1280-921a-11eb-8aeb-51165cbe5b9b.png)
