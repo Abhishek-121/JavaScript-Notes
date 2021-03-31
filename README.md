@@ -541,9 +541,106 @@ Console.log(z) ;
   For details about node properties, visit the below link https://developer.mozilla.org/en-US/docs/Web/API/Node
 
 
+## Event Handling 
 
+* Events are actions that happen in the webpage like clicking a button or submit the form. If the user selects a button on a webpage, we might want to respond to that action by displaying an alert on the webpage.
 
+* Event handlers can be used to handle and verify user input, user actions, and browser actions:
 
+* Things that should be done every time a page loads
+* Things that should be done when the page is closed
+* Action that should be performed when a user clicks a button
+* Content that should be verified when a user inputs data And more ...
+ 
+* Many different methods can be used to let JavaScript work with events:
+
+* HTML event attributes can execute JavaScript code directly
+* HTML event attributes can call JavaScript functions
+* You can assign your own event handler functions to HTML elements
+* You can prevent events from being sent or being handled
+
+In the following example, an onclick attribute (with code), is added to a <button> element:
+
+```jsx
+Example
+<button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+```
+In the example above, the JavaScript code changes the content of the element with id="demo".
+
+### Common HTML Events
+Here is a list of some common HTML events:
+```jsx
+Event	Description
+onchange	An HTML element has been changed
+onclick	The user clicks an HTML element
+onmouseover	The user moves the mouse over an HTML element
+onmouseout	The user moves the mouse away from an HTML element
+onkeydown	The user pushes a keyboard key
+onload	The browser has finished loading the page
+```
+
+![Event](https://user-images.githubusercontent.com/56202291/113110505-c8300400-9224-11eb-857e-e0aed6f3b296.jpeg)
+
+* The addEventListener() : This method attaches an event handler to the specified element.
+
+* It attaches an event handler to an element without overwriting existing event handlers.
+* You can add many event handlers to one element.
+
+```jsx
+Syntax :
+element.addEventListener(event, function, useCapture);
+
+Example
+ element.addEventListener("click", function(){ 
+ alert("Hello World!"); 
+ });
+
+```
+
+## Event bubbling and capturing:
+
+### Bubbling: When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
+
+```jsx
+Let’s say we have 3 nested elements FORM > DIV > P with a handler on each of them:
+
+<style>
+  body * {
+    margin: 10px;
+    border: 1px solid blue;
+  }
+</style>
+
+<form onclick="alert('form')">FORM
+  <div onclick="alert('div')">DIV
+    <p onclick="alert('p')">P</p>
+  </div>
+</form>
+```
+
+* A click on the inner
+* first runs onclick:
+* On that
+* Then on the outer
+* Then on the outer
+* And so on upwards till the document object
+
+### Capturing: There’s another phase of event processing called “capturing”. It is rarely used in real code, but sometimes can be useful.
+
+* The standard DOM Events describes 3 phases of event propagation:
+
+1. Capturing phase – the event goes down to the element.
+2. Target phase – the event reached the target element.
+3. Bubbling phase – the event bubbles up from the element.
+
+### Prevent Default and Form Events:
+
+* The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+
+For example, this can be useful when:
+
+* Clicking on a "Submit" button, prevent it from submitting a form
+* Clicking on a link, prevent the link from following the URL
 
 
 
