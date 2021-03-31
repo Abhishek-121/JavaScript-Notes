@@ -430,6 +430,86 @@ function (a, b){
 
 ```
 
+## Scope
+
+1. Local Variables Scope : Variables declared within a JavaScript function, become LOCAL to the function.
+
+* Local variables have Function scope: They can only be accessed from within the function.
+
+```jsx
+Example
+// code here can NOT use name
+
+function loconav() {
+  var name = "Volvo";
+  // code here CAN use name
+}
+```
+
+2. Global Variables Scope : A variable declared outside a function, becomes GLOBAL.
+
+* A global variable has global scope: All scripts and functions on a web page can access it.
+
+```jsx
+Example
+  var name = "Volvo";
+// code here can use name
+function loconav() {
+  var name = "Volvo";
+  // code here CAN also use name
+}
+```
+
+![scope](https://user-images.githubusercontent.com/56202291/113106871-e136b600-9220-11eb-8111-4f2a7b9dfe9d.png)
+
+
+## Hoisting
+
+* It is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
+
+<img width="641" alt="Hoisting" src="https://user-images.githubusercontent.com/56202291/113107554-b13be280-9221-11eb-8706-ea87dc1942c7.png">
+
+## Closure
+
+* A function bind together with its lexical environment. Or A function along with its lexical scope.
+
+### Def : It is the combination of function bundled together (enclosed) with reference to its surrounding state (lexical env) .
+
+```jsx
+Eg : function x(){
+ var a =7;
+ function y(){
+  Console.log(a);
+ }
+y();
+}
+x();
+
+*  We can return the function as well.
+Eg : function x(){
+ var a =7;
+ function y(){
+  Console.log(a);
+ }
+ return y;// Here we are returning the function.
+}
+var z = x();
+Console.log(z) ;
+ // Output : function y(){console.log(a);}
+ 
+ ```
+
+* Uses Of Clauses :
+1. Module design pattern.
+2. Currying
+3. Functions like once
+4. Memorize
+5. Maintaining state in async world
+6. Set timeouts
+7. Iterators.
+
+
+
 
 ## The DOM - Working with HTML and CSS:
 
