@@ -169,7 +169,8 @@ const last = `Mohanty`;
 
 ### String Methods
 
-![String](https://user-images.githubusercontent.com/56202291/113100744-6e760c80-9219-11eb-9914-674930021e0d.jpeg)
+![SMethod](https://user-images.githubusercontent.com/56202291/113101854-d7aa4f80-921a-11eb-8ad5-6ac0e559cb62.jpeg)
+
 
 ### Numbers 
  Eg : var x = 20;
@@ -209,3 +210,32 @@ var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
 
 
 ![objects](https://user-images.githubusercontent.com/56202291/113101532-771b1280-921a-11eb-8aeb-51165cbe5b9b.png)
+
+```jsx
+Example
+var person = {
+  firstName: "Abhishek",
+  lastName : "Maheshwari",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+```
+* In a function definition, this refers to the "owner" of the function.
+
+* In the example above, this is the person object that "owns" the fullName function.
+
+* In other words, this.firstName means the firstName property of this object.
+
+## Note : Methods are functions stored as object properties.
+
+* You access an object method with the following syntax:
+```jsx
+objectName.methodName() 
+```
+
+
+
+
+
