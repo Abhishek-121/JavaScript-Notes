@@ -71,7 +71,7 @@ Your browser has a rendering engine that’s responsible for displaying the cont
 
 Once parsed, it generates a tree structure of the DOM elements. DOM stands for Document Object Model and it is a convention for how to represent objects located in an HTML document. These objects — or “nodes” — of every document can be manipulated using scripting languages like JavaScript.
 
-            ![Dom Tree](https://user-images.githubusercontent.com/56202291/113097857-484e6d80-9215-11eb-860d-913824a8e6e9.jpeg)
+   ![Dom Tree](https://user-images.githubusercontent.com/56202291/113097857-484e6d80-9215-11eb-860d-913824a8e6e9.jpeg)
 
                                                                   DOM TREE 
 
