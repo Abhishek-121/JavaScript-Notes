@@ -430,6 +430,7 @@ function (a, b){
 
 ```
 
+
 ## Scope
 
 1. Local Variables Scope : Variables declared within a JavaScript function, become LOCAL to the function.
@@ -463,11 +464,13 @@ function loconav() {
 ![scope](https://user-images.githubusercontent.com/56202291/113106871-e136b600-9220-11eb-8111-4f2a7b9dfe9d.png)
 
 
+
 ## Hoisting
 
 * It is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
 
 <img width="641" alt="Hoisting" src="https://user-images.githubusercontent.com/56202291/113107554-b13be280-9221-11eb-8706-ea87dc1942c7.png">
+
 
 ## Closure
 
