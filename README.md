@@ -36,6 +36,9 @@ This is a persistence layer. The browser may need to save all sorts of data loca
 
 ![Browser](https://user-images.githubusercontent.com/56202291/113097325-5354ce00-9214-11eb-953a-46049a374263.png)
 
+
+## How the Web Works 
+
 ### The journey from code to webpage: 
 let’s walk through that Github search to see how we go from a URL typed into an address bar to a running web page:
 
@@ -58,6 +61,11 @@ let’s walk through that Github search to see how we go from a URL typed into a
 9) For each asset listed, the browser repeats the entire process above, making additional HTTP requests to the server for each resource.
 
 10) Once the browser has finished loading all other assets that were listed in the HTML page, the page will finally be loaded in the browser window and the connection will be closed
+
+
+Painting the final picture
+
+
 
 ```jsx
 Example
