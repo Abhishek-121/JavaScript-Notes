@@ -253,20 +253,212 @@ console.log(b); // undefined
 5. String
 6. Symbol
 
-* In JavaScript there are only six falsy values. Both null and undefined are two of the six falsy values. Here’s a full list:
-false
-0 (zero)
-“” (empty string)
-null
-undefined
-NaN (Not A Number)
-Any other value in JavaScript is considered truthy.
+** In JavaScript there are only six falsy values. Both null and undefined are two of the six falsy values. Here’s a full list:
+* false
+* 0 (zero)
+* “” (empty string)
+* null
+* undefined
+* NaN (Not A Number)
+* Any other value in JavaScript is considered truthy.
+
+## Booleans and Equality:
+A boolean variable can be either true or false .
+```jsx
+* Example:
+
+const age = 18;
+const ofAge = age > 18;
+console.log(ofAge); // false
+```
+
+* Equal signs:
+
+* = sign: used for assignment/ updation of values
+
+```jsx
+let name = 'Soumya';
+name = 'Raja';
+Out of == and ===, you should almost always use ===.
+
+== and === are used for equality comparison.
+
+console.log(age === 18); // true
+== vs === :
+```
+
+* === checks both type & value.
+* == only checks value.
+
+```jsx
+10 === "10" // false as values are same but types are not
+10 == "10" // true as values are same
+```
+
+## Functions:
+
+- A JavaScript function is a block of code designed to perform a particular task.
+- A JavaScript function is executed when "something" invokes it (calls it).
+- By defining the code we can use it multiple times.
+
+* Syntax : 
+function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+
+```jsx
+Example 
+function myFunction(p1, p2) {
+  return p1 * p2;   // The function returns the product of p1 and p2
+}
+```
+
+### Built In Function
+JavaScript has five functions built in to the language. They are eval, parseInt, parseFloat, escape, and unescape.
+
+1. eval(Expression)
+
+* Examples:
+var x = 2
+var y = 39
+var z = "42"
+println(eval("x + y + 1")) 
+println(eval(z))
+// Both will print 42
+
+2. parseInt: Parses a string argument and returns an integer of the specified radix or base. 
+```jsx
+Syntax:
+
+parseInt(string)
+parseInt(string, radix)
+string is a string that represents the value you want to parse.
+radix is an integer that represents the radix of the return value.
+```
+3. parseFloat :Parses a string argument and returns a floating point number. 
+* Syntax:
+  parseFloat(string)
+
+4. escape: Returns the hexadecimal encoding of an argument in the ISO Latin-1 character set. 
+ * Syntax:
+   escape("string")
+ Example : the following returns "abc%26%25":
+           escape("abc&%")
+
+5. unescape : Returns the ASCII string for the specified value. 
+* Syntax:
+  unescape("string")
+  string is a String object or literal.
+
+### Arguments & Parameters:
+
+* Parameters are like placeholders for data that will be passed to a function.
+* Arguments are the actual values passed to a function while calling it.
+
+```jsx
+function calculateBill(billAmount, taxRate) { // here billAmount, taxRate are parameters
+  const total = billAmount + billAmount * taxRate 
+  return total;
+}
+
+calculateBill(100, 0.13); // here 100, 0.13 are arguments
+```
+
+![function](https://user-images.githubusercontent.com/56202291/113105825-a7b17b00-921f-11eb-8227-132588c2641c.jpeg)
+
+* Parameters are variables local to the function; available only inside the function.
+* You can also pass variables as arguments during a function call.
+
+* Different ways of declaring a function :
+
+1. Normal function :      
+```jsx
+function name([param[, param[, ... param]]]) {
+   statements
+}
+```
+2. Anonymous function : Function without name.
+
+```jsx
+Syntax : 
+var myFunction = function() {
+    statements
+}
+```
+
+ 3. IIFE (Immediately Invoked Function Expression): When functions are used only once.IIFE are function expressions that are invoked as soon as the function is declared.
+
+```jsx
+Eg : var result = (function () {
+    var name = "Barry";
+    return name;
+})();
+// Immediately creates the output:
+result; // "Barry"
+```
+
+4. Arrow Function Expression :
+
+```jsx
+
+//Traditional Function
+function (a){
+  return a + 100;
+}
+
+// Arrow Function Break Down
+
+// 1. Remove the word "function" and place arrow between the argument and opening body bracket
+(a) => {
+  return a + 100;
+}
+
+// 2. Remove the body brackets and word "return" -- the return is implied.
+(a) => a + 100;
+
+// 3. Remove the argument parentheses
+a => a + 100;
+
+Eg :
+// Traditional Function
+function (a, b){
+  return a + b + 100;
+}
+
+// Arrow Function
+(a, b) => a + b + 100;
+
+```
 
 
+## The DOM - Working with HTML and CSS:
+
+### Def: is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document. 
+
+-- With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+
+* JavaScript can change all the HTML elements in the page
+* JavaScript can change all the HTML attributes in the page
+* JavaScript can change all the CSS styles in the page
+* JavaScript can remove existing HTML elements and attributes
+* JavaScript can add new HTML elements and attributes
+* JavaScript can react to all existing HTML events in the page
+* JavaScript can create new HTML events in the page
 
 
+![DOM](https://user-images.githubusercontent.com/56202291/113106127-04149a80-9220-11eb-9804-b4c5e1bd4895.png)
 
+-- DOM standard is separated into 3 different parts:
 
+1. Core DOM - standard model for all document types
+2. XML DOM - standard model for XML documents
+3. HTML DOM - standard model for HTML documents
+
+* Elements properties and methods:
+  For details about element properties, visit the below link https://www.w3schools.com/jsref/dom_obj_all.asp
+
+* Nodes properties and methods:
+  For details about node properties, visit the below link https://developer.mozilla.org/en-US/docs/Web/API/Node
 
 
 
