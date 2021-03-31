@@ -245,7 +245,22 @@ console.log(a);// null
 let b;
 console.log(b); // undefined
 ```
+** Both null and undefined are primitive values. Here is a full list:
+1. Boolean
+2. Null
+3. Undefined
+4. Number
+5. String
+6. Symbol
 
+* In JavaScript there are only six falsy values. Both null and undefined are two of the six falsy values. Here’s a full list:
+false
+0 (zero)
+“” (empty string)
+null
+undefined
+NaN (Not A Number)
+Any other value in JavaScript is considered truthy.
 
 
 
