@@ -77,6 +77,66 @@ Once parsed, it generates a tree structure of the DOM elements. DOM stands for D
 * So how do all the packets know how to get to their destination without getting lost?
   The answer is TCP/IP.
 
+## Introduction to JavaScript
+* JavaScript accepts both double and single quotes
+* JavaScript and Java are completely different languages, both in concept and design.
+* JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.
+* ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.
+
+* While writing JS include the content within the <script> tag within the same file.
+* For External Js :
+   <script src =“./index.js	></script>
+  
+## Variables 
+
+* JavaScript variables are containers for storing data values.
+
+```jsx
+var x = 5;
+var y = 6;
+var z = x + y;
+```
+* It's a good programming practice to declare all variables at the beginning of a script.
+
+* Since JavaScript treats underscore as a letter, identifiers containing _ are valid variable names:
+*  Eg : var _name = 'Abhishek'
+
+-- Three ways of defining a variable :
+ 
+1. var - functionally scoped , can be changed
+2. const -block scoped, cannot  be changed
+3. Let  - block scoped, can be changed
+
+* var a = 10; // variable declaration statement
+* console.log(a); //function call statement
+
+* {
+    ...   //Code block…
+    ...
+   }
+
+* Declaring a variable : Generally start with small alphabet or use Camel-case Notation(like iLikePizza)  or snake case(like i_like_pizza) also include 2 special character($and_).
+
+ 
+- Anything which is in Global scope attached to the Window object.
+- const and let are not attached to the window object even if they are declared in global scope while var get attached.
+
+
+![let var const](https://user-images.githubusercontent.com/56202291/113098954-d2e39c80-9216-11eb-9a56-31420015a8db.jpeg)
+
+
+## Types of Variables : 
+***
+
+1.String
+2.Number
+3.Object
+4.Boolean
+5.Undefined
+6.Symbol : Always gives a guaranteed unique identifier
+7.Null
+
+####Note : Everything except Object is Primitive type, Object is special one.
 
 
 ```jsx
