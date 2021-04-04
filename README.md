@@ -646,7 +646,137 @@ For example, this can be useful when:
 * Clicking on a link, prevent the link from following the URL
 
 
+## Ajax 
+* Ajax stands for Asynchronous JavaScript And XML. Ajax loads the data from the server and updating the parts of a web page selectively without reloading the whole page. 
 
+### Introduction of AJAX:-
+
+* AJAX is a technique for creating faster, and more interactive web applications with the help of XML, HTML, CSS, and JavaScript. It is a web browser technology which is independent of web server software.
+* AJAX use of the built-in browser XMLHttpRequest (XHR) objects to send and receive information to and from a web server asynchronously, in the background, without blocking the page or interfering with the user's experience.
+* Ajax uses XHTML for the content, CSS for designing, along with Document Object Model and JavaScript for dynamic content display. 
+
+
+### How Does AJAX Work?
+
+JavaScript and XML combine to make asynchronous updating happen through the use of something called an XMLHttpRequest (XHR) object. When the user visits a web page which is designed using AJAX technology, and a prescribed event occurs (a button, or fills out a form) the JavaScript creates an XMLHttpRequest (XHR) object, which then transfers data in an XML format between a web browser and a web. The XMLHttpRequest(XHR) object sends a request for updated page data to the web server, the server process the request, a response is created at server-side and sent back to the browser, which then uses JavaScript to process the response and display it on the screen as updated content.
+
+
+## Code :
+```jsx
+
+console.log("Ajax tutorial in one video");
+
+let fetchBtn = document.getElementById('fetchBtn');
+fetchBtn.addEventListener('click', buttonClickHandler)
+
+function buttonClickHandler() {
+     console.log('You have clicked the fetchBtn');
+
+    // Instantiate an xhr object
+    const xhr = new XMLHttpRequest();
+
+    // Open the object
+    // xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);
+
+    // USE THIS FOR POST REQUEST
+    xhr.open('POST', 'http://dummy.restapiexample.com/api/v1/create', true);
+    xhr.getResponseHeader('Content-type', 'application/json');
+
+
+    // What to do on progress (optional)
+    xhr.onprogress = function(){
+        console.log('On progress');
+    }
+
+
+    // xhr.onreadystatechange = function () {
+    //     console.log('ready state is ', xhr.readyState);
+        
+    // }
+
+    // What to do when response is ready
+    xhr.onload = function () {
+        if(this.status === 200){
+
+            console.log(this.responseText)
+        }
+        else{
+            console.log("Some error occured")
+        }
+    }
+
+    // send the request
+    params = `{"name":"test34sad545","salary":"123","age":"23"}`;
+    xhr.send(params);
+
+    console.log("We are done!");
+
+}
+
+let popBtn = document.getElementById('popBtn');
+popBtn.addEventListener('click', popHandler);
+
+function popHandler() {
+    console.log('You have clicked the pop handler');
+
+    // Instantiate an xhr object
+    const xhr = new XMLHttpRequest();
+
+    // Open the object
+    xhr.open('GET', 'http://dummy.restapiexample.com/api/v1/employees', true);
+
+
+    // What to do when response is ready
+    xhr.onload = function () {
+        if(this.status === 200){
+            let obj = JSON.parse(this.responseText);
+            console.log(obj);
+            let list = document.getElementById('list');
+            str = "";
+            for (key in obj)
+            {
+                str += `<li>${obj[key].employee_name} </li>`;
+            }
+            list.innerHTML = str;
+        }
+        else{
+            console.log("Some error occured")
+        }
+    }
+
+    // send the request
+    xhr.send();
+    console.log("We are done fetching employees!");
+    
+}
+```
+
+## Fetch api in Javascript :
+
+* The Fetch API is a promise-based API of JavaScript for making asynchronous HTTP requests in the browser similar to XMLHttpRequest (XHR). Unlike XHR, the fetch API is a simple and clean API that uses promises to provides more powerful features to fetch resources from the server. Fetch API is standardized now and is supported by all modern browsers except IE. The fetch() method only has one mandatory argument: the URL of the resource that we want to fetch.
+
+```jsx
+### Syntax :
+
+fetch('/js/users.json')
+   .then(response => {
+     // handle response data
+   })
+   .catch(err => {
+     // handle errors
+   });
+```
+
+### How to use fetch api ?
+
+* Pass the path of the resource that we want to retrieve as a parameter to fetch(). We cannot block the user interface by waiting until the request finishes. That is why to fetch() returns a Promise, an object which represents a future result. We are using the then method to wait for the server's response. The catch() method is optional. Its purpose is to intercepts errors if the request fails to complete due to network failure or any other reason.
+Now let us see how we can extract the JSON from that response once the request completes:
+
+```jsx
+fetch('URL here')
+.then(res => res.json())
+.then(json => console.log(json));
+```
 
 
 
