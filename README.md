@@ -751,6 +751,9 @@ function popHandler() {
 }
 ```
 
+![ajax](https://user-images.githubusercontent.com/56202291/113512981-eed39f00-9584-11eb-930f-0e9e16640c1f.png)
+
+
 ## Fetch api in Javascript :
 
 * The Fetch API is a promise-based API of JavaScript for making asynchronous HTTP requests in the browser similar to XMLHttpRequest (XHR). Unlike XHR, the fetch API is a simple and clean API that uses promises to provides more powerful features to fetch resources from the server. Fetch API is standardized now and is supported by all modern browsers except IE. The fetch() method only has one mandatory argument: the URL of the resource that we want to fetch.
